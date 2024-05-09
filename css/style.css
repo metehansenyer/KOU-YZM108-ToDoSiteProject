@@ -1,0 +1,247 @@
+:root {
+    --main-color: #e97e7e;
+    --uncompleted-color: #dfd968;
+    --completed-color: #5eb64e;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: white;
+
+    /* Kopyalanmasını ve seçilmesini engellemek */
+    -webkit-touch-callout: none; /* iOS ve Safari */
+    -webkit-user-select: none; /* Chrome, Safari, Opera */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Genel */
+}
+
+.navbar-left {
+    width: 5vw;
+    height: 53vw;
+    margin: 0.5vw;
+    border-radius: 1.15vw;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: var(--main-color);
+}
+
+.navbar-button {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 1.15vw;
+
+    position: fixed;
+    top: 1vw;
+    left: 1vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+    color: black;
+    background-color: white;
+}
+
+.button-about {
+    top: 5.5vw;
+}
+
+.emoji {
+    position: fixed;
+}
+
+.app-name {
+    width: 94vw;
+    height: 6vh;
+
+    position: fixed;
+    top: 1vw;
+    left: 6vw;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 3vw;
+}
+.add-task {
+    width: 93.5vw;
+    height: 10vw;
+    margin: 1vw;
+    border-radius: 1.15vw;
+
+    position: fixed;
+    top: 4.5vw;
+    left: 5vw;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    background-color: var(--main-color);
+}
+
+.add-text {
+    width: 84vw;
+    height: 8vw;
+    border: 0;
+    border-radius: 1.15vw;
+
+    position: relative;
+    left: 0.8vw;
+
+    text-align: left;
+    vertical-align: text-top;
+    font-size: large;
+
+    background-color: white;
+}
+
+.add-button {
+    width: 7vw;
+    height: 8vw;
+    border: 0;
+    border-radius: 1.15vw;
+
+    position: relative;
+    left: 1.5vw;
+
+    background-color: white;
+}
+
+.add-button:hover {
+    background-color: whitesmoke;
+}
+
+.list-head {
+    width: 46.5vw;
+    height: 4vw;
+    
+    position: fixed;
+    top: 17vw;
+    left: 6vw;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 3vw;
+}
+
+.head-completed {
+    left: 52.7vw;
+}
+
+.uncompleted-ul {
+    list-style-type: none;
+
+    width: 46.5vw;
+    height: auto;
+    max-height: 32.5vw;
+    margin: 0;
+    padding: 0;
+
+    position: fixed;
+    top: 21vw;
+    left: 6vw;
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.task {
+    width: inherit;
+    height: 8vw;
+    margin: 0.3vw 0;
+    border-radius: 1.15vw;
+
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    font-size: 1vw;
+    overflow-wrap: anywhere;
+
+    background-color: var(--main-color);
+}
+
+.uncompleted {
+    background-color: var(--uncompleted-color);
+}
+
+.completed {
+    background-color: var(--completed-color);
+}
+
+p {
+    width: 42vw;
+    height: 6vw;
+    
+    margin-left: 1vw;
+    margin-right: 1.8vw;
+
+    overflow: auto;
+    text-align: start;
+    color: white;
+}
+
+.completed-ul {
+    list-style-type: none;
+
+    width: 46.5vw;
+    height: auto;
+    max-height: 32.5vw;
+    margin: 0;
+    padding: 0;
+
+    position: fixed;
+    top: 21vw;
+    left: 53vw;
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.task-buttons {
+    width: 2vw;
+    height: 8vw;
+
+    right: 0.5vw;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.edit {
+    position: relative;
+    margin-top: 1.5vw;
+}
+
+.garbage {
+    position: relative;
+    margin-top: 1.8vw;
+}
+
+.check {
+    position: relative;
+    margin-top: 3vw;
+}
+
+.uncheck {
+    position: relative;
+    margin-top: 4.5vw;
+}

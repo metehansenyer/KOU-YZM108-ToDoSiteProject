@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar-left">
+        <a href="./index.html">
+            <div class="navbar-button">
+                <i class="fa-solid fa-house fa-xl emoji"></i>
+            </div>
+        </a>
+
+        <a href="./html/about.html">
+            <div class="navbar-button button-about">
+                <i class="fa-solid fa-circle-info fa-xl emoji"></i>
+            </div>
+        </a>
+    </nav>
+
+
+    <div>
+        <!-- Header -->
+        <header class="app-name">TO DO</header>
+
+        <!-- Add Task -->
+        <div class="add-task">
+            <input class="add-text" type="text" id="add-task" placeholder="Görev giriniz.">
+            <button class="add-button" type="submit" id="add-button">
+                <i class="fa-solid fa-right-to-bracket fa-2xl"></i>
+            </button>
+        </div>
+
+
+        <!-- Tasks -->
+        <div>
+            <!-- Uncompleted -->
+            <div>
+                <!-- Header -->
+                <header class="list-head">Yapılacaklar</header>
+
+                <!-- List -->
+                <ul class="uncompleted-ul" id="uncompleted-list"></ul>
+            </div>
+
+            <!-- Completed -->
+            <div>
+                <!-- Header -->
+                <header class="list-head head-completed">Yapılanlar</header>
+
+                <!-- List -->
+                <ul class="completed-ul" id="completed-list"></ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/scripts.js" ></script>
+    <script src="https://kit.fontawesome.com/76c7501aeb.js" crossorigin="anonymous"></script>
+</body>
+</html>
