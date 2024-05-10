@@ -46,7 +46,7 @@ function add_task(taskDetail) {
     div.appendChild(check);
     li.appendChild(p);
     li.appendChild(div);
-    list.appendChild(li);
+    list.insertBefore(li, list.firstChild);
 }
 
 function edit_task(p) {
@@ -93,7 +93,7 @@ function check_task(taskDetail, id) {
     div.appendChild(uncheck);
     li.appendChild(p);
     li.appendChild(div);
-    completed_list.appendChild(li);
+    completed_list.insertBefore(li, completed_list.firstChild);
     
     delete_untask(id);
 }

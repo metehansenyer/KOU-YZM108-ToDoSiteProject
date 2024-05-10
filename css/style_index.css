@@ -1,7 +1,14 @@
 :root {
-    --main-color: #e97e7e;
-    --uncompleted-color: #dfd968;
+    --screen-background: #7accc8;
+    --main-color: #35404f;
+    --input-color: #f3f2e7;
+    --input-color-hover: #d1d0c7;
+
+    --uncompleted-color: #fdc705;
     --completed-color: #5eb64e;
+
+    --text-color: #000000;
+    --text-color-task: #000000;
 }
 
 body {
@@ -10,7 +17,7 @@ body {
     border: none;
     box-sizing: border-box;
     text-decoration: none;
-    background-color: white;
+    background-color: var(--screen-background);
 
     /* Kopyalanmasını ve seçilmesini engellemek */
     -webkit-touch-callout: none; /* iOS ve Safari */
@@ -22,7 +29,7 @@ body {
 
 .navbar-left {
     width: 5vw;
-    height: 53vw;
+    height: 98vh;
     margin: 0.5vw;
     border-radius: 1.15vw;
 
@@ -47,12 +54,8 @@ body {
     justify-content: space-around;
     flex-direction: column;
 
-    color: black;
-    background-color: white;
-}
-
-.button-about {
-    top: 5.5vw;
+    color: var(--text-color);
+    background-color: var(--screen-background);
 }
 
 .emoji {
@@ -101,9 +104,9 @@ body {
 
     text-align: left;
     vertical-align: text-top;
-    font-size: large;
+    font-size: 1vw;
 
-    background-color: white;
+    background-color: var(--input-color);
 }
 
 .add-button {
@@ -115,11 +118,11 @@ body {
     position: relative;
     left: 1.5vw;
 
-    background-color: white;
+    background-color: var(--input-color);
 }
 
 .add-button:hover {
-    background-color: whitesmoke;
+    background-color: var(--input-color-hover);
 }
 
 .list-head {
@@ -159,6 +162,10 @@ body {
     flex-direction: column;
 }
 
+.uncompleted-ul::-webkit-scrollbar {
+    display: none;
+}
+
 .task {
     width: inherit;
     height: 8vw;
@@ -186,14 +193,21 @@ body {
 
 p {
     width: 42vw;
-    height: 6vw;
+    height: 7vw;
     
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
     margin-left: 1vw;
     margin-right: 1.8vw;
 
+    font-size: 1.38vw;
     overflow: auto;
     text-align: start;
-    color: white;
+    color: var(--text-color-task);
+}
+
+p::-webkit-scrollbar {
+    display: none;
 }
 
 .completed-ul {
@@ -212,6 +226,10 @@ p {
 
     display: flex;
     flex-direction: column;
+}
+
+.completed-ul::-webkit-scrollbar {
+    display: none;
 }
 
 .task-buttons {

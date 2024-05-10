@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+
+    background-image: url("../img/uclu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* Kopyalanmasını ve seçilmesini engellemek */
+    -webkit-touch-callout: none; /* iOS ve Safari */
+    -webkit-user-select: none; /* Chrome, Safari, Opera */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Genel */
+}
+
+.navbar-button {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 1.15vw;
+
+    position: fixed;
+    top: 1vw;
+    left: 1vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+    color: black;
+    background-color: white;
+}
+
+div {
+    width: 82vw;
+    height: 10vw;
+
+    position: relative;
+    top: 36vw;
+    left: 6vw;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+p {
+    width: 20vw;
+    height: 10vw;
+    border-radius: 1.5vw;
+    background-color: black;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 1vw;
+}
+
+a {
+    position: absolute;
+    top: 7.21vw;
+
+    color: aqua;
+}
+
+a.asaf {
+    left: 6.8vw;
+}
+
+a.alperen {
+    left: 39.5vw;
+}
+
+a.mete {
+    left: 70.6vw;
+}
