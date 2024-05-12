@@ -1,6 +1,8 @@
+/* Variable definition because it would take a long time to manually change things (colours) that are used repeatedly. */
 :root {
     --screen-background: #7accc8;
     --main-color: #35404f;
+    
     --input-color: #f3f2e7;
     --input-color-hover: #d1d0c7;
 
@@ -12,6 +14,7 @@
 }
 
 body {
+    /* For fullscreen body tag. */
     margin: 0;
     padding: 0;
     border: none;
@@ -19,13 +22,14 @@ body {
     text-decoration: none;
     background-color: var(--screen-background);
 
-    /* Kopyalanmasını ve seçilmesini engellemek */
-    -webkit-touch-callout: none; /* iOS ve Safari */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    /* Preventing the selection and copying of texts. */
     -webkit-user-select: none; /* Chrome, Safari, Opera */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE 10+ */
-    user-select: none; /* Genel */
+    user-select: none; /* General */
 }
+
+/* From this point on, I will use all my units of measurement as "vw" or "vh". Because I want a responsive and proportional site. */
 
 .navbar-left {
     width: 5vw;
@@ -33,6 +37,7 @@ body {
     margin: 0.5vw;
     border-radius: 1.15vw;
 
+    /* A fixed position navigation bar. */
     position: fixed;
     top: 0;
     left: 0;
@@ -55,7 +60,11 @@ body {
     flex-direction: column;
 
     color: var(--text-color);
-    background-color: var(--screen-background);
+    background-color: var(--input-color);
+}
+
+.navbar-button:hover {
+    background-color: var(--input-color-hover);
 }
 
 .emoji {
@@ -104,7 +113,7 @@ body {
 
     text-align: left;
     vertical-align: text-top;
-    font-size: 1vw;
+    font-size: 2vw;
 
     background-color: var(--input-color);
 }
@@ -149,19 +158,20 @@ body {
 
     width: 46.5vw;
     height: auto;
-    max-height: 34.7vw;
+    max-height: 34.7vw; /* Limit of the section. */
     margin: 0;
     padding: 0;
 
     position: fixed;
     top: 21vw;
     left: 6vw;
-    overflow: auto;
+    overflow: auto; /* To create a scroll bar in case the list items go beyond the limits we set because we want a fixed screen view. */
 
     display: flex;
     flex-direction: column;
 }
 
+/* To hide the scroll bar. */
 .uncompleted-ul::-webkit-scrollbar {
     display: none;
 }
@@ -178,7 +188,7 @@ body {
     justify-content: flex-start;
 
     font-size: 1vw;
-    overflow-wrap: anywhere;
+    overflow-wrap: anywhere; /* So that the texts do not overflow. */
 
     background-color: var(--main-color);
 }
@@ -201,15 +211,20 @@ p {
     margin-right: 1.8vw;
 
     font-size: 1.38vw;
-    overflow: auto;
+    overflow: auto; /* To create a scroll bar in case the text goes beyond the limits we have set, since we want all tasks to have the same sizes. */
     text-align: start;
     color: var(--text-color-task);
 }
 
+/* To hide the scroll bar. */
 p::-webkit-scrollbar {
     display: none;
 }
 
+/* 
+The features in this section are the same as uncompleted-ul except one. We could get a cleaner CSS by reducing the number of classes,
+but since we did not want to change the planned classes, we did not see it as a problem to create two separate similar classes.
+*/
 .completed-ul {
     list-style-type: none;
 

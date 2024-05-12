@@ -1,4 +1,14 @@
+/* Variable definition because it would take a long time to manually change things (colours) that are used repeatedly. */
+:root {
+    --input-color: #f3f2e7;
+    --input-color-hover: #d1d0c7;
+    --text-color: #ffffff;
+    --box-color: #000000;
+    --link-color: #00ffff;
+}
+
 body {
+    /* For fullscreen body tag. */
     margin: 0;
     padding: 0;
     border: none;
@@ -9,12 +19,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 
-    /* Kopyalanmasını ve seçilmesini engellemek */
-    -webkit-touch-callout: none; /* iOS ve Safari */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    /* Preventing the selection and copying of texts. */
     -webkit-user-select: none; /* Chrome, Safari, Opera */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE 10+ */
-    user-select: none; /* Genel */
+    user-select: none; /* General */
 }
 
 .navbar-button {
@@ -31,8 +40,12 @@ body {
     justify-content: space-around;
     flex-direction: column;
 
-    color: black;
-    background-color: white;
+    color: var(--box-color);
+    background-color: var(--input-color);
+}
+
+.navbar-button:hover {
+    background-color: var(--input-color-hover);
 }
 
 div {
@@ -51,7 +64,7 @@ p {
     width: 20vw;
     height: 10vw;
     border-radius: 1.5vw;
-    background-color: black;
+    background-color: var(--box-color);
 
     margin: 0;
     padding: 0;
@@ -60,25 +73,26 @@ p {
     align-items: center;
     justify-content: center;
 
-    color: white;
-    font-size: 1vw;
+    color: var(--text-color);
+    font-size: 0.9vw;
 }
 
+/* The links were independent of the paragraph. We solved it by manually adjusting their position. */
 a {
     position: absolute;
-    top: 7.21vw;
+    top: 7.2vw;
 
-    color: aqua;
+    color: var(--link-color);
 }
 
 a.asaf {
-    left: 6.8vw;
+    left: 6vw;
 }
 
 a.alperen {
-    left: 39.5vw;
+    left: 39vw;
 }
 
 a.mete {
-    left: 70.6vw;
+    left: 70vw;
 }
