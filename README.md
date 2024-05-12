@@ -100,11 +100,7 @@ Sitenin verimlilik testleri Chrome web tarayıcısı üzerinden yapılmıştır.
 
 ## Teşekkürler
 
-<<<<<<< HEAD
 Web teknolojileri alanındaki öğrenimimizde katkılarından dolayı Kocaeli Üniversitesi Yazılım Mühendisliği Bölümü'den Dr. Öğr. Üyesi Hakan GÜNDÜZ hocamıza teşekkürlerimizi arz ederiz.
-=======
-Web teknolojileri alanındaki öğrenimimizdeki katkılarından dolayı Kocaeli Üniversitesi Yazılım Mühendisliği Bölümü'den Dr. Öğr. Üyesi Hakan GÜNDÜZ hocamıza teşekkürlerimizi arz ederiz.
->>>>>>> ba8b86e6f5f242a2c31faa6e5ff45a02e87793ca
 
 ## Proje Ekibi
 
@@ -112,8 +108,4 @@ Web teknolojileri alanındaki öğrenimimizdeki katkılarından dolayı Kocaeli 
 |:---:|:---:|:---:|
 | Metehan Şenyer | 230229047 | [@Metehan Şenyer](https://www.linkedin.com/in/metehansenyer) |
 | Alperen Türk | 230229019 | [@Alperen Türk](https://www.linkedin.com/in/alperen-t%C3%BCrk-9a9a0b285) |
-<<<<<<< HEAD
-| Asaf Erdem Kılıç | 230229070 | [@Asaf Kılıç](https://www.linkedin.com/in/asaf-k%C4%B1l%C4%B1%C3%A7-4b33bb308/) |
-=======
-| Asaf Erdem Kılıç | 230229070 | [@Asaf Kılıç](https://www.linkedin.com/in/asaf-k%C4%B1l%C4%B1%C3%A7-4b33bb308/) |
->>>>>>> ba8b86e6f5f242a2c31faa6e5ff45a02e87793ca
+| Asaf Erdem Kılıç | 230229070 | [@Asaf Kılıç](https://www.linkedin.com/in/asaf-k%C4%B1l%C4%B1%C3%A7-4b33bb308) |
