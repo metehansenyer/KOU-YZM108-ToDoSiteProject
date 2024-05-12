@@ -13,7 +13,7 @@ document.getElementById('uncompleted-list').addEventListener("click", function (
     if (e.target.classList.length == 4) { //If the ul child clicked is button like edit/remove/check it will not react.
         return;
     } else if (e.target.offsetParent.className == "task uncompleted") { //If the ul child clicked is tag p it will use the p's parent tag.
-        check_task(e.target.textContent, e.target.offsetParent.id);
+        check_task(e.target.offsetParent.firstChild.textContent, e.target.offsetParent.id);
     } else if (e.target.className == "task uncompleted") { //If the ul child clicked is li it will use that.
         check_task(e.target.firstChild.textContent, e.target.id);
     }
@@ -24,7 +24,7 @@ document.getElementById('completed-list').addEventListener("click", function (e)
     if (e.target.classList.length == 4) { //If the ul child clicked is button like edit/remove/check it will not react.
         return;
     } else if (e.target.offsetParent.className == "task completed") { //If the ul child clicked is tag p it will use the p's parent tag.
-        uncheck_task(e.target.textContent, e.target.offsetParent.id);
+        uncheck_task(e.target.offsetParent.firstChild.textContent, e.target.offsetParent.id);
     } else if (e.target.className == "task completed") { //If the ul child clicked is li it will use that.
         uncheck_task(e.target.firstChild.textContent, e.target.id);
     }
