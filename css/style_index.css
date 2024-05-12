@@ -33,7 +33,7 @@ body {
 
 .navbar-left {
     width: 5vw;
-    height: 98vh;
+    height: 48.3vw;
     margin: 0.5vw;
     border-radius: 1.15vw;
 
@@ -73,12 +73,10 @@ body {
 
 .app-name {
     width: 94vw;
-    height: 6vh;
-
+    height: 5.5vw;
     position: fixed;
-    top: 1vw;
+
     left: 6vw;
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -158,7 +156,7 @@ body {
 
     width: 46.5vw;
     height: auto;
-    max-height: 34.7vw; /* Limit of the section. */
+    max-height: 27.8vw; /* Limit of the section. */
     margin: 0;
     padding: 0;
 
@@ -166,7 +164,7 @@ body {
     top: 21vw;
     left: 6vw;
     overflow: auto; /* To create a scroll bar in case the list items go beyond the limits we set because we want a fixed screen view. */
-
+    
     display: flex;
     flex-direction: column;
 }
@@ -230,7 +228,7 @@ but since we did not want to change the planned classes, we did not see it as a 
 
     width: 46.5vw;
     height: auto;
-    max-height: 34.7vw;
+    max-height: 27.8vw;
     margin: 0;
     padding: 0;
 
