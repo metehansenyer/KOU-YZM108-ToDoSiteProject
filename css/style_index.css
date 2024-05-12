@@ -33,7 +33,7 @@ body {
 
 .navbar-left {
     width: 5vw;
-    height: 48.3vw;
+    height: 98vh;
     margin: 0.5vw;
     border-radius: 1.15vw;
 
@@ -156,7 +156,7 @@ body {
 
     width: 46.5vw;
     height: auto;
-    max-height: 27.8vw; /* Limit of the section. */
+    max-height: 46.8vw; /* Limit of the section. */
     margin: 0;
     padding: 0;
 
@@ -228,7 +228,7 @@ but since we did not want to change the planned classes, we did not see it as a 
 
     width: 46.5vw;
     height: auto;
-    max-height: 27.8vw;
+    max-height: 46.8vw;
     margin: 0;
     padding: 0;
 
