@@ -6,6 +6,50 @@ document.getElementById('add-task').addEventListener("keypress", function (e) {
     }
 });
 
+document.getElementById('uncompleted-list').addEventListener("click", function (e) {
+    if (e.target.classList.length == 4) {
+        return;
+    } else if (e.target.offsetParent.className == "task uncompleted") {
+        check_task(e.target.textContent, e.target.offsetParent.id);
+    } else if (e.target.className == "task uncompleted") {
+        check_task(e.target.firstChild.textContent, e.target.id);
+    }
+});
+
+document.getElementById('completed-list').addEventListener("click", function (e) {
+    if (e.target.classList.length == 4) {
+        return;
+    } else if (e.target.offsetParent.className == "task completed") {
+        uncheck_task(e.target.textContent, e.target.offsetParent.id);
+    } else if (e.target.className == "task completed") {
+        uncheck_task(e.target.firstChild.textContent, e.target.id);
+    }
+});
+
+document.getElementById('uncompleted-list').addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+
+    if (e.target.classList.length == 4) {
+        delete_untask(e.target.offsetParent.offsetParent.id);
+    } else if (e.target.offsetParent.className == "task uncompleted") {
+        delete_untask(e.target.offsetParent.id);
+    } else if (e.target.className == "task uncompleted") {
+        delete_untask(e.target.id);
+    }
+});
+
+document.getElementById('completed-list').addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+
+    if (e.target.classList.length == 4) {
+        delete_task(e.target.offsetParent.offsetParent.id);
+    } else if (e.target.offsetParent.className == "task completed") {
+        delete_task(e.target.offsetParent.id);
+    } else if (e.target.className == "task completed") {
+        delete_task(e.target.id);
+    }
+});
+
 function add_task_input() {
     const task = document.getElementById('add-task').value;
 
@@ -39,7 +83,6 @@ function add_task(taskDetail) {
     edit.addEventListener("click", function(){ edit_task(p); });
     garbage.addEventListener("click", function(){ delete_untask(li.id); });
     check.addEventListener("click", function(){ check_task(p.textContent, li.id); });
-    li.addEventListener("contextmenu", function(e){ e.preventDefault(); check_task(p.textContent, li.id); });
     
     div.appendChild(edit);
     div.appendChild(garbage);
@@ -87,7 +130,6 @@ function check_task(taskDetail, id) {
 
     garbage.addEventListener("click", function(){ delete_task(li.id); });
     uncheck.addEventListener("click", function(){ uncheck_task(p.textContent, li.id); });
-    li.addEventListener("contextmenu", function(e){ e.preventDefault(); uncheck_task(p.textContent, li.id); });
     
     div.appendChild(garbage);
     div.appendChild(uncheck);
