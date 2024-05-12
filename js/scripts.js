@@ -109,10 +109,10 @@ function add_task(taskDetail) {
 function edit_task(p) {
     const newTask = prompt("Görevi düzenleyin:", p.textContent);
     
-    if (newTask !== "") {
-        p.textContent = newTask;
-    } else {
+    if (newTask == null || newTask == "") {
         alert("Lütfen geçerli bir değer giriniz.");
+    } else {
+        p.textContent = newTask;
     }
 }
 
